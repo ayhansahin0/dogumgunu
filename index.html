@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İyi ki Doğdun 🎂</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Sacramento', cursive;
+      background: linear-gradient(to bottom right, #ffc0cb, #ffe4e1);
+      overflow-x: hidden;
+    }
+    .center {
+      text-align: center;
+      margin-top: 100px;
+    }
+    .button {
+      font-size: 24px;
+      padding: 15px 30px;
+      border: none;
+      background-color: #ff69b4;
+      color: white;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+      margin-top: 30px;
+    }
+    .button:hover {
+      transform: scale(1.05);
+    }
+    .section {
+      display: none;
+      padding: 50px 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+    .photo-gallery img {
+      max-width: 200px;
+      margin: 10px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .timeline {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+    }
+    .timeline p {
+      margin: 20px 0;
+    }
+    .letter {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      font-size: 20px;
+    }
+    audio, video {
+      margin-top: 20px;
+    }
+    .song {
+      cursor: pointer;
+      color: #ff1493;
+      margin-bottom: 20px;
+    }
+    .song:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div id="intro" class="center">
+    <h1>İyi ki Doğdun Aşkım 🎉</h1>
+    <button class="button" id="introButton" onclick="showNextSection()">Sürprizini Aç 🎁</button>
+  </div>
+
+  <div id="section1" class="section">
+    <h2>📸 Birlikte Geçirdiğimiz Anılar</h2>
+    <div class="photo-gallery">
+      <img src="photo1.jpg" alt="Anı 1">
+      <img src="photo2.jpg" alt="Anı 2">
+      <img src="photo3.jpg" alt="Anı 3">
+    </div>
+    <button class="button next-btn" onclick="showNextSection()">Devam Et ➡️</button>
+  </div>
+
+  <div id="section2" class="section">
+    <h2>🕰️ Tanışma Hikayemiz</h2>
+    <div class="timeline">
+      <p>📅 10 Mart 2024 – Seni ilk gördüğüm an… çarpışmıştık 💥😳</p>
+      <p>💬 24 Kasım 2024 – Instagram’dan bana yazmıştın 📲</p>
+      <p>👀 30 Kasım 2024 – İlk defa buluştuk 💞</p>
+      <p>🎉 13 Aralık 2024 – Baloda sevgili olduk 💃🕺💖</p>
+    </div>
+    <button class="button next-btn" onclick="showNextSection()">Devam Et ➡️</button>
+  </div>
+
+  <div id="section3" class="section">
+    <h2>💌 Doğum Günü Mektubum</h2>
+    <div class="letter">
+      <p>Canımın içi,
+      <br><br>
+      Bugün senin doğum günün… Ve ben bu özel günü, seni ne kadar çok sevdiğimi sana bir kez daha hatırlatmak için bir fırsat olarak görüyorum. Hayatımda olduğun her an, her anı seninle yaşamak, seninle gülmek, seninle ağlamak, seninle olmak o kadar özel ki…
+
+Beni her zaman olduğu gibi olduğu gibi kabul ettin ve bu dünyadaki en güzel şey, senin yanında olabilmek. Geçirdiğimiz her anın, her gülüşümüzün, her küçük dokunuşumuzun bir hatıra olduğunu hissediyorum. Ve her geçen gün, seninle daha fazla anı biriktirmek, hayatı seninle keşfetmek istiyorum.
+
+Seninle her şey daha parlak, daha renkli ve daha anlamlı. İyi ki varsın, iyi ki doğdun ve seni tanımışım. Hayatımda bana sunduğun her şey için minnettarım. Seninle geçirdiğim her an, dünyadaki en değerli şey. Ve birlikte daha nice yıllar, daha nice anılar biriktirmek dileğiyle doğum günün kutlu olsun
+      <br><br>
+      Seni çok ama çok seviyorum 🎂❤️</p>
+    </div>
+    <button class="button next-btn" onclick="showNextSection()">Devam Et ➡️</button>
+  </div>
+
+  <div id="section4" class="section">
+    <h2>🎥 Sürpriz Videomuz</h2>
+    <video width="320" height="240" controls>
+      <source src="video.mp4" type="video/mp4">
+      Tarayıcınız video dosyasını desteklemiyor.
+    </video>
+    <button class="button next-btn" onclick="showNextSection()">Devam Et ➡️</button>
+  </div>
+
+  <div id="section5" class="section">
+    <h2>🎼 En Sevdiğin Şarkılar</h2>
+    <div class="letter">
+      <div class="song" onclick="playSong('song1.mp3')">
+        🎵 <strong>Love Me Not – Ravyn Lenae</strong><br><em></em>
+      </div>
+      <div class="song" onclick="playSong('song2.mp3')">
+        🎵 <strong>Flying – Cody Fry</strong><br><em></em>
+      </div>
+      <div class="song" onclick="playSong('song3.mp3')">
+        🎵 <strong>No Surprises – Radiohead</strong><br><em></em>
+      </div>
+      <div class="song" onclick="playSong('song4.mp3')">
+        🎵 <strong>Jigsaw Falling Into Place – Radiohead</strong><br><em></em>
+      </div>
+      <div class="song" onclick="playSong('song5.mp3')">
+        🎵 <strong>Lovesong – Adele</strong><br><em></em>
+      </div>
+      <div class="song" onclick="playSong('song6.mp3')">
+        🎵 <strong>Heavy – Linkin Park</strong><br><em></em>
+      </div>
+    </div>
+    <audio id="player" controls style="margin-top: 20px;"></audio>
+    <button class="button" id="seeAllButton" onclick="showAllSections()">Hepsini Birlikte Gör 💖</button>
+  </div>
+
+  <script>
+    let currentSection = 0;
+    const sections = ["intro", "section1", "section2", "section3", "section4", "section5"];
+
+    function showNextSection() {
+      if (currentSection < sections.length) {
+        document.getElementById(sections[currentSection]).style.display = "none";
+        currentSection++;
+        if (currentSection < sections.length) {
+          document.getElementById(sections[currentSection]).style.display = "block";
+        }
+      }
+    }
+
+    function showAllSections() {
+      sections.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = "block";
+      });
+      // Tüm "Devam Et" ve "Hepsini Birlikte Gör" ve "Sürprizini Aç" butonlarını gizle
+      document.querySelectorAll(".next-btn").forEach(btn => btn.style.display = "none");
+      const seeAllBtn = document.getElementById("seeAllButton");
+      if (seeAllBtn) seeAllBtn.style.display = "none";
+      const introBtn = document.getElementById("introButton");
+      if (introBtn) introBtn.style.display = "none";
+    }
+
+    function playSong(src) {
+      const player = document.getElementById("player");
+      player.src = src;
+      player.play();
+    }
+  </script>
+</body>
+</html>
